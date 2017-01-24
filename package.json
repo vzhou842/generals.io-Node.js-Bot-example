@@ -1,0 +1,30 @@
+{
+  "name": "generals.io-node.js-bot-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "socket.io-client": "^1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo 'No tests implemented.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vzhou842/generals.io-Node.js-Bot-example.git"
+  },
+  "keywords": [
+    "generals.io",
+    "bot",
+    "node.js",
+    "javascript",
+    "example"
+  ],
+  "author": "Victor Zhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vzhou842/generals.io-Node.js-Bot-example/issues"
+  },
+  "homepage": "https://github.com/vzhou842/generals.io-Node.js-Bot-example#readme"
+}
