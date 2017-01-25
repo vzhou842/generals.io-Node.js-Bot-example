@@ -5,6 +5,6 @@ This is an example of a basic Javascript implementation of a bot for [generals.i
 ## Usage
 
 ```
-git clone https://github.com/vzhou842/generals.io-Node.js-Bot-example
+git clone https://github.com/vzhou842/generals.io-Node.js-Bot-example.git
 node main.js
 ```
