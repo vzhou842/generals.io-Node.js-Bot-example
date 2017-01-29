@@ -1,6 +1,6 @@
 # generals.io Node.js Bot Example
 
-This is an example of a basic Javascript implementation of a bot for [generals.io](http://generals.io). Read the tutorial associated with this bot at [dev.generals.io/api](http://dev.generals.io/api).
+This is an example of a basic Javascript implementation of a bot for [generals.io](http://generals.io). Read the tutorial associated with this bot at [dev.generals.io/api#tutorial](http://dev.generals.io/api#tutorial).
 
 ## Usage
 
