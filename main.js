@@ -1,6 +1,6 @@
 var io = require('socket.io-client');
 
-var socket = io('http://localhost:8080');
+var socket = io('http://bot.generals.io');
 
 socket.on('disconnect', function() {
 	console.error('Disconnected from server.');
@@ -25,7 +25,7 @@ socket.on('connect', function() {
 	// Join a custom game and force start immediately.
 	// Custom games are a great way to test your bot while you develop it because you can play against your bot!
 	var custom_game_id = 'my_private_game';
-	socket.emit('join_private', custom_game_id, username, user_id);
+	socket.emit('join_private', custom_game_id, user_id);
 	socket.emit('set_force_start', custom_game_id, true);
 	console.log('Joined custom game at http://bot.generals.io/games/' + encodeURIComponent(custom_game_id));
 
@@ -33,13 +33,13 @@ socket.on('connect', function() {
 	// Here are some examples of how you'd do that:
 
 	// Join the 1v1 queue.
-	// socket.emit('join_1v1', username, user_id);
+	// socket.emit('join_1v1', user_id);
 
 	// Join the FFA queue.
-	// socket.emit('play', username, user_id);
+	// socket.emit('play', user_id);
 
 	// Join a 2v2 team.
-	// socket.emit('join_team', 'team_name', username, user_id);
+	// socket.emit('join_team', 'team_name', user_id);
 });
 
 // Terrain Constants.
