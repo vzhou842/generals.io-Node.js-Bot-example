@@ -102,11 +102,11 @@ socket.on('game_update', function(data) {
 
 	// The next |size| terms are army values.
 	// armies[0] is the top-left corner of the map.
-	var armies = map.slice(2, size + 1);
+	var armies = map.slice(2, size + 2);
 
 	// The last |size| terms are terrain values.
 	// terrain[0] is the top-left corner of the map.
-	var terrain = map.slice(size + 2, map.length - 1);
+	var terrain = map.slice(size + 2, size + 2 + size);
 
 	// Make a random move.
 	while (true) {
