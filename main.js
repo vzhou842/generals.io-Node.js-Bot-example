@@ -1,6 +1,6 @@
 var io = require('socket.io-client');
 
-var socket = io('http://bot.generals.io');
+var socket = io('http://botws.generals.io');
 
 socket.on('disconnect', function() {
 	console.error('Disconnected from server.');
