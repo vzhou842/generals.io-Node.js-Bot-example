@@ -20,6 +20,7 @@ socket.on('connect', function() {
 	var username = 'Example Bot';
 
 	// Set the username for the bot.
+	// This should only ever be done once. See the API reference for more details.
 	socket.emit('set_username', user_id, username);
 
 	// Join a custom game and force start immediately.
