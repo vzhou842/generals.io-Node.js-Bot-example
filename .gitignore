@@ -32,3 +32,8 @@ build/Release
 dump.rdb
 
 .gitignore~
+
+# Use the --save option of npm install to alter package.json (e.g.,
+# “npm install --save my-package-name”). To restore packages after
+# checking out, simply run “npm install”.
+node_modules
