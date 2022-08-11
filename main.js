@@ -1,11 +1,15 @@
 var io = require('socket.io-client');
 
-var socket = io('http://botws.generals.io');
+var socket = io('https://bot.generals.io');
 
 socket.on('disconnect', function() {
 	console.error('Disconnected from server.');
 	process.exit(1);
 });
+
+socket.on('error_set_username', function(response) {
+    console.log(`Error setting username: ${response}`);
+})
 
 socket.on('connect', function() {
 	console.log('Connected to server.');
@@ -16,9 +20,9 @@ socket.on('connect', function() {
 	 * replacing this line with something that instead supplies the user_id via an environment variable, e.g.
 	 * var user_id = process.env.BOT_USER_ID;
 	 */
-	var user_id = 'my_example_bot_id';
-	var username = 'Example Bot';
-
+	var user_id = 'my_example_bot'; // CHANGE ME
+        // Bot usernames must start with [Bot] and be no longer than 18 characters
+	var username = '[Bot]ExampleBot'; // CHANGE ME
 	// Set the username for the bot.
 	// This should only ever be done once. See the API reference for more details.
 	socket.emit('set_username', user_id, username);
@@ -27,6 +31,8 @@ socket.on('connect', function() {
 	// Custom games are a great way to test your bot while you develop it because you can play against your bot!
 	var custom_game_id = 'my_private_game';
 	socket.emit('join_private', custom_game_id, user_id);
+
+
 	socket.emit('set_force_start', custom_game_id, true);
 	console.log('Joined custom game at http://bot.generals.io/games/' + encodeURIComponent(custom_game_id));
 
@@ -146,6 +152,7 @@ socket.on('game_update', function(data) {
 
 function leaveGame() {
 	socket.emit('leave_game');
+	console.log('Left game');
 }
 
 socket.on('game_lost', leaveGame);
